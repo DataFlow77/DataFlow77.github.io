@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POP MART CRYBABY Showcase</title>
+  <meta name="description" content="A lively POP MART CRYBABY themed collection showcase demo for GitHub Pages.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="CRYBABY showcase">
+      <span class="brand-mark">CB</span>
+      <span>
+        <strong>CRYBABY Showcase</strong>
+        <small>collection display</small>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="页面导航">
+      <a href="#gallery">展柜</a>
+      <a href="#blindbox">盲盒</a>
+      <a href="#mood">氛围</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="bubble-field" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="./assets/crybaby-stage.svg" alt="">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">POP MART INSPIRED DISPLAY</p>
+        <h1>CRYBABY 泪光收藏展</h1>
+        <p class="lead">把盲盒、挂件、隐藏款和今日心情摆进一个更生动的线上展柜。</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#gallery">进入展柜</a>
+          <button class="ghost-action" type="button" id="shuffle-hero">换个心情</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="收藏标签">
+      <span>tear drop</span>
+      <span>soft vinyl</span>
+      <span>blind box</span>
+      <span>secret hunt</span>
+      <span>pastel shelf</span>
+      <span>mini pendant</span>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-head">
+        <p class="section-kicker">DISPLAY WALL</p>
+        <h2>今日展柜</h2>
+      </div>
+
+      <div class="filter-row" role="list" aria-label="筛选系列">
+        <button class="filter-button active" type="button" data-filter="all">全部</button>
+        <button class="filter-button" type="button" data-filter="dream">梦境</button>
+        <button class="filter-button" type="button" data-filter="sweet">甜点</button>
+        <button class="filter-button" type="button" data-filter="night">夜光</button>
+      </div>
+
+      <div class="toy-grid" id="toy-grid">
+        <article class="toy-card dream featured" data-category="dream" data-name="Moon Drip">
+          <div class="toy-figure moon">
+            <span class="face"></span>
+            <span class="tear left"></span>
+            <span class="tear right"></span>
+          </div>
+          <div>
+            <span class="tag">Dream</span>
+            <h3>Moon Drip</h3>
+            <p>柔蓝月光、透明泪滴、睡前展示位。</p>
+          </div>
+        </article>
+
+        <article class="toy-card sweet" data-category="sweet" data-name="Candy Sob">
+          <div class="toy-figure candy">
+            <span class="face"></span>
+            <span class="tear left"></span>
+            <span class="tear right"></span>
+          </div>
+          <div>
+            <span class="tag">Sweet</span>
+            <h3>Candy Sob</h3>
+            <p>糖果灯箱、奶油色底座、适合放在第一排。</p>
+          </div>
+        </article>
+
+        <article class="toy-card night" data-category="night" data-name="Galaxy Cry">
+          <div class="toy-figure galaxy">
+            <span class="face"></span>
+            <span class="tear left"></span>
+            <span class="tear right"></span>
+          </div>
+          <div>
+            <span class="tag">Night</span>
+            <h3>Galaxy Cry</h3>
+            <p>星屑外壳、微光展示、夜间氛围最强。</p>
+          </div>
+        </article>
+
+        <article class="toy-card dream" data-category="dream" data-name="Cloudy Hug">
+          <div class="toy-figure cloud">
+            <span class="face"></span>
+            <span class="tear left"></span>
+            <span class="tear right"></span>
+          </div>
+          <div>
+            <span class="tag">Dream</span>
+            <h3>Cloudy Hug</h3>
+            <p>云朵披肩、软糯表情、适合成套陈列。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="blindbox-band" id="blindbox">
+      <div class="blindbox-copy">
+        <p class="section-kicker">BLIND BOX MOMENT</p>
+        <h2>今日开盒签</h2>
+        <p>点一下生成今日展示位，像拆盲盒一样给页面一点随机惊喜。</p>
+        <button class="primary-action button-reset" type="button" id="draw-box">抽取今日款</button>
+      </div>
+      <div class="blindbox-stage" aria-live="polite">
+        <div class="box-lid"></div>
+        <div class="box-body">
+          <span id="draw-result">Secret Spark</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mood-board" id="mood">
+      <div class="section-head">
+        <p class="section-kicker">MOOD BOARD</p>
+        <h2>泪光色卡</h2>
+      </div>
+      <div class="palette">
+        <span style="--swatch:#ff7eb6">bubble pink</span>
+        <span style="--swatch:#91e8d6">mint tear</span>
+        <span style="--swatch:#ffe07a">soft yellow</span>
+        <span style="--swatch:#8fc7ff">sky gloss</span>
+        <span style="--swatch:#2f2b5f">midnight</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Fan-made showcase demo for GitHub Pages.</span>
+    <span>POP MART and CRYBABY names are used for descriptive display only.</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
